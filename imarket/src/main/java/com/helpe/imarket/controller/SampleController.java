@@ -26,6 +26,7 @@ public class SampleController {
 
     @Autowired
     private SampleService service;
+    
     @RequestMapping(value="/sample", method=RequestMethod.GET)
     public SampleModel sample(@RequestParam(value="name", defaultValue="World") String name) {
     	logger.info("TEST");
