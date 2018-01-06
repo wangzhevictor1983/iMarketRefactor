@@ -6,7 +6,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/iMarket_Refactor
     username: root
-    password: root
+    password: victor626
     driverClassName: com.mysql.jdbc.Driver
   jpa:
     database: MYSQL
