@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 import com.helpe.imarket.model.*;
-import com.helpe.imarket.service.SampleService;
+import com.helpe.imarket.service.impl.SampleService;
 
 @RestController
 public class SampleController {
@@ -40,4 +40,18 @@ public class SampleController {
     		service.save(model);
     		return "OK";
     }
+    
+    @RequestMapping(value="/findSampleById", method=RequestMethod.GET)
+    public SampleModel findSampleById(@RequestParam(value="id", defaultValue="1") int id) {
+    	logger.info("TEST");
+        return service.findById(id);
+    }
+    
+    @RequestMapping(value="/findSampleRecordById", method=RequestMethod.GET)
+    public SampleModel findSampleRecordById(@RequestParam(value="id", defaultValue="1") int id) {
+    	logger.info("TEST");
+        return service.findRecordById(id);
+    }
+    
+    
 }
