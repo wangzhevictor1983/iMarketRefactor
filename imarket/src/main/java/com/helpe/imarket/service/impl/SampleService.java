@@ -7,10 +7,9 @@ import org.springframework.stereotype.Component;
 import com.helpe.imarket.entity.Sample;
 import com.helpe.imarket.model.SampleModel;
 import com.helpe.imarket.provider.ISampleProvider;
-import com.helpe.imarket.service.ISampleService;
 
 @Component
-public class SampleService implements ISampleService{
+public class SampleService {
 	public SampleService() {
 		
 	}

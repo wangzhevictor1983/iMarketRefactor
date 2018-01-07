@@ -59,5 +59,11 @@ public class SampleController {
         return service.findRecordByPersistance(id);
     }
     
+    @RequestMapping(value="/frameworkTest", method=RequestMethod.GET)
+    public SampleModel frameworkTest(@RequestParam(value="id", defaultValue="1")int id) {
+    		
+    		return null;
+    }
+    
     
 }
