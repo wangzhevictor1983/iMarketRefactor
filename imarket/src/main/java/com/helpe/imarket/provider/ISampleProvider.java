@@ -2,8 +2,9 @@ package com.helpe.imarket.provider;
 
 import com.helpe.imarket.entity.Sample;
 
-public interface ISampleProvider {
-	public void save(Sample sample);
-	public Sample findById(int id);
-	public Sample findRecordById(int id);
+public interface ISampleProvider extends IProvider{
+	void save(Sample sample);
+	Sample findById(int id);
+	Sample findRecordById(int id);
+	Sample findRecordByEntityManager(int id);
 }

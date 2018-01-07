@@ -36,5 +36,12 @@ public class SampleService implements ISampleService{
 		return result;
 	}
 	
+	public SampleModel findRecordByPersistance(int id) {
+		Sample resultById = provider.findRecordByEntityManager(id);
+		SampleModel result = new SampleModel(resultById.getId(), resultById.getSampleText());
+		return result;
+	}
+	
+	
 	
 }

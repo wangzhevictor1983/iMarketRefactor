@@ -6,9 +6,10 @@ import org.springframework.data.repository.query.Param;
 
 import com.helpe.imarket.entity.Sample;
 
-public interface ISampleDao extends JpaRepository<Sample, Integer>{
+public interface ISampleDao extends JpaRepository<Sample, Integer> {
 	Sample findById(int id);
 	
     @Query("select u from Sample u where u.id = :id")
     Sample getSampleRecord(@Param("id")int id);
+    
 }

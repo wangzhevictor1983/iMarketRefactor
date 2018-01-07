@@ -53,5 +53,11 @@ public class SampleController {
         return service.findRecordById(id);
     }
     
+    @RequestMapping(value="/findSampleRecordByPersistance", method=RequestMethod.GET)
+    public SampleModel findSampleRecordByPersistance(@RequestParam(value="id", defaultValue="1") int id) {
+    	logger.info("TEST");
+        return service.findRecordByPersistance(id);
+    }
+    
     
 }
