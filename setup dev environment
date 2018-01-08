@@ -1,0 +1,44 @@
+1. Download java8(jdk_1.8.0_u151)
+2. 
+MAC
+配置jdk环境变量：终端输入 vim ~/.bash_profile 按回车，进入编辑模式后输入以下内容： 
+
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
+
+PATH=$JAVA_HOME/bin:$PATH:.
+
+CLASSPATH=JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:.
+
+ 
+
+export JAVA_HOME
+
+export PATH
+
+export CLASSPATH
+
+按esc :wq回车，保存退出后在终端输入 source ~/.bash_profile 以使文件生效。
+
+终端输入java -version可以查看Java版本，whereis java可以查看Java位置，echo $JAVA_HOME可以打印出JAVA_HOME。
+
+WINDOWS
+首先右击我的电脑选择属性(或者是点击开始栏-右击计算机-选择属性)，然后选择高级系统设置，选择环境变量，在系统变量中选择新建。然后在变量名与变量值中进行配置。
+
+3. install maven
+http://maven.apache.org/install.html
+
+4. install eclipse 4.7.2/STS suite
+若安装eclipse 4.7.2，安装完成后需要在eclipse market中搜索STS，并安装。
+
+5. import existing maven project into eclipse
+
+
+JAVA_HOME(JDK安装路径)
+C:\Program Files\Java\jdk1.8.0_45
+CLASSPATH
+.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar
+Path(系统已经存在Path变量，请在Path变量最后进行添加，不要删除其他内容)
+;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin
+在命令提示符中分别输入java,javac,java -version
+
+3
