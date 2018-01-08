@@ -1,6 +1,7 @@
 package com.helpe.imarket.framework.service;
 
-public interface IService<T> {
-	T execute();
-	
+import com.helpe.imarket.framework.model.IModel;
+
+public interface IService {
+	IModel execute();
 }

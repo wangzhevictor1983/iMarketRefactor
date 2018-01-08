@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 import com.helpe.imarket.model.*;
+import com.helpe.imarket.service.impl.FrameworkSampleService;
 import com.helpe.imarket.service.impl.SampleService;
 
 @RestController
@@ -60,9 +61,10 @@ public class SampleController {
     }
     
     @RequestMapping(value="/frameworkTest", method=RequestMethod.GET)
-    public SampleModel frameworkTest(@RequestParam(value="id", defaultValue="1")int id) {
-    		
-    		return null;
+    public FrameworkSampleOutput frameworkTest(@RequestParam(value="id", defaultValue="1")int id) {
+    		FrameworkSampleInput input = new FrameworkSampleInput(id);
+    		FrameworkSampleService service = new FrameworkSampleService(input);
+    		return (FrameworkSampleOutput)service.execute();
     }
     
     

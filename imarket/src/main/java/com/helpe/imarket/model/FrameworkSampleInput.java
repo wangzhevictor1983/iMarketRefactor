@@ -1,6 +1,8 @@
 package com.helpe.imarket.model;
 
-public class FrameworkSampleInput {
+import com.helpe.imarket.framework.model.IModel;
+
+public class FrameworkSampleInput implements IModel{
 	
 	private int id;
 	
