@@ -12,12 +12,12 @@ public abstract class AbstractService implements IService {
 	
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
-	protected IModel data;
+	public IModel data;
 	
 	public AbstractService (IModel data){
 		this.data = data;
 	}
-	
+
 	@Override
 	public IModel execute() {
 		// TODO Auto-generated method stub

@@ -13,7 +13,6 @@ import com.helpe.imarket.model.FrameworkSampleOutput;
 
 @Component
 public class FrameworkSampleService extends AbstractService {
-
 	@Resource
 	private ISampleProvider provider;
 	
@@ -22,13 +21,11 @@ public class FrameworkSampleService extends AbstractService {
 	
 	public FrameworkSampleService(FrameworkSampleInput data) {
 		super(data);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	protected FrameworkSampleOutput process() {
-		//provider.findRecordByEntityManager()
-		Sample result = provider.findById(((FrameworkSampleInput) this.data).getId());
+		Sample result = this.provider.findById(((FrameworkSampleInput) this.data).getId());
 		this.output.setId(result.getId());
 		this.output.setContent(result.getSampleText());
 		return output;

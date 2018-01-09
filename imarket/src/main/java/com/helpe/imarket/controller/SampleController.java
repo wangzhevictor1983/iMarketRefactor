@@ -28,6 +28,9 @@ public class SampleController {
     @Autowired
     private SampleService service;
     
+    @Autowired
+    private FrameworkSampleService frameworkService;
+    
     @RequestMapping(value="/sample", method=RequestMethod.GET)
     public SampleModel sample(@RequestParam(value="name", defaultValue="World") String name) {
     	logger.info("TEST");
@@ -62,9 +65,10 @@ public class SampleController {
     
     @RequestMapping(value="/frameworkTest", method=RequestMethod.GET)
     public FrameworkSampleOutput frameworkTest(@RequestParam(value="id", defaultValue="1")int id) {
-    		FrameworkSampleInput input = new FrameworkSampleInput(id);
-    		FrameworkSampleService service = new FrameworkSampleService(input);
-    		return (FrameworkSampleOutput)service.execute();
+    		FrameworkSampleInput input = new FrameworkSampleInput();
+    		input.setId(id);
+    		frameworkService.data = input;
+    		return (FrameworkSampleOutput)frameworkService.execute();
     }
     
     

@@ -1,7 +1,10 @@
 package com.helpe.imarket.model;
 
+import org.springframework.stereotype.Component;
+
 import com.helpe.imarket.framework.model.IModel;
 
+@Component
 public class FrameworkSampleOutput implements IModel{
     public void setId(long id) {
 		this.id = id;
@@ -14,9 +17,8 @@ public class FrameworkSampleOutput implements IModel{
 	private long id;
     private String content;
 
-    public FrameworkSampleOutput(long id, String content) {
-        this.id = id;
-        this.content = content;
+    public FrameworkSampleOutput() {
+
     }
 
     public long getId() {
